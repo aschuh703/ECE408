@@ -37,7 +37,7 @@ After the server finishes executing your job, it will pack your build folder and
  ✱ The build folder has been uploaded to http://your_url.tar.gz. The data will be present for only a short duration of time.
 ```
 
-You will need this URL to complete the first question of your lab0 quiz.
+You will need this URL to complete the first question of your lab0 quiz. In this lab0 quiz, all questions will be immediately graded except the first one, so please make sure you have filled in all the answers before submitting.
 
 
 <!-- Click on the code tab and then read the code written.
