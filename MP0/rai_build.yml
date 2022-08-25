@@ -1,6 +1,6 @@
 rai:
   version: 0.2
-  image: ece408-base:latest
+  image: aschuh703/ece408-base:latest
 resources:
   cpu:
     architecture: amd64
