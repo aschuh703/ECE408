@@ -1,11 +1,46 @@
-
-## Objective
+## Lab0 (MP0) Instructions
 
 The purpose of this lab is to get you familiar with using the submission system for this course and the hardware used.
 
-## Instructions
+Once you setup rai correctly, you can run lab0 (MP0) with the following command (assume you are in the parent directory):
+```bash
+rai -p ./MP0
+```
 
-Click on the code tab and then read the code written.
+If your `.rai_profile` is correct, you will see the following lines printed to your terminal:
+
+    ✱ Checking your authentication credentials.
+    ✱ Preparing your project directory for upload.
+    ✱ Uploading your project directory. This may take a few minutes.
+
+When the server starts to process your submission, you will see the compilation and execution messages on your terminal. In this lab, we simply fetch the CUDA device information with `cudaGetDeviceProperties`. You will see the following entries and corresponding data on your terminal. You will need these data to complete the lab0 quiz.
+
+* GPU card's name
+
+* GPU computation capabilities
+
+* Maximum global memory size
+
+* Maximum constant memory size
+
+* Maximum shared memory size per block
+
+* Maximum block dimensions
+
+* Maximum grid dimensions
+
+* Warp size
+
+After the server finishes executing your job, it will pack your build folder and save it to an URL. You will see a message similar as below:
+
+```bash
+ ✱ The build folder has been uploaded to http://your_url.tar.gz. The data will be present for only a short duration of time.
+```
+
+You will need this URL to complete the first question of your lab0 quiz.
+
+
+<!-- Click on the code tab and then read the code written.
 Do not worry if you do not understand all the details of the code (the purpose is to get you familiar with the submission system).
 Once done reading, click the "Compile & Run" button.
 
@@ -31,23 +66,9 @@ The `Timer` or `Logger` seconds are hidden, if no timing or logging statements o
 
 We log the hardware information used for this course --- the details which will be explained in the first few lectures.
 
-* GPU card's name
-
-* GPU computation capabilities
-
-* Maximum number of block dimensions
-
-* Maximum number of grid dimensions
-
-* Maximum size of GPU memory
-
-* Amount of constant and share memory
-
-* Warp size
-
 All results from previous attempts can be found in the Attempts tab.
 You can choose any of these attempts for submission for grading.
 Note that even though you can submit multiple times, only your last submission will be reflected in the Coursera database.
 
-After completing this lab, and before proceeding to the next one, you will find it helpful to read the [tutorial](/help) document
+After completing this lab, and before proceeding to the next one, you will find it helpful to read the [tutorial](/help) document -->
 
