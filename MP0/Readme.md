@@ -39,36 +39,3 @@ After the server finishes executing your job, it will pack your build folder and
 
 You will need this URL to complete the first question of your lab0 quiz. In this lab0 quiz, all questions will be immediately graded except the first one, so please make sure you have filled in all the answers before submitting.
 
-
-<!-- Click on the code tab and then read the code written.
-Do not worry if you do not understand all the details of the code (the purpose is to get you familiar with the submission system).
-Once done reading, click the "Compile & Run" button.
-
-The submission system will automatically switch to the compile-and-run results that will also be available through the **Attempts** tab.
-There, you will be able to see a summary of your attempt.
-
-The `Timer` section has 3 columns:
-
-* *Kind* corresponds with the first argument to `wbTimer_start`,
-* *Location* describes the `file::line_number` of the `wbTimer` call, and
-* *Time* in millisecond that it took to execute the code in between the `wbTime_start` and `wbTime_stop`, and
-* *Message* the string you passed into the second argument to the timer
-
-Similarly, you will see the following information under the `Logger` section.
-
-The `Logger` section has 3 columns:
-
-* *Level* is the level specified when calling the `wbLog` function (indicating the severity of the event),
-* *Location* describes the `function::line_number` of the `wbLog` call, and
-* *Message* which is the message specified for the `wbLog` function
-
-The `Timer` or `Logger` seconds are hidden, if no timing or logging statements occur in your program.
-
-We log the hardware information used for this course --- the details which will be explained in the first few lectures.
-
-All results from previous attempts can be found in the Attempts tab.
-You can choose any of these attempts for submission for grading.
-Note that even though you can submit multiple times, only your last submission will be reflected in the Coursera database.
-
-After completing this lab, and before proceeding to the next one, you will find it helpful to read the [tutorial](/help) document -->
-
