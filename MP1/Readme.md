@@ -9,15 +9,13 @@ Before starting this lab, make sure that:
 
 * You have completed all week 1 lectures or videos
 
-* You have completed "Lab Tour with Device Query" MP
-
-* You have looked over the [tutorial](/help) document.
+* You have completed Lab0 (MP0)
 
 * Chapter 2 of the text book would also be helpful
 
 ## Instruction
 
-Edit the code in the 'Code' tab to perform the following:
+You should edit the code in `template.cu` to perform the following:
 
 * Allocate device memory
 
@@ -36,3 +34,12 @@ Edit the code in the 'Code' tab to perform the following:
 Instructions about where to place each part of the code is
 demarcated by the `//@@` comment lines.
 
+You can test your code by running `rai -p ./MP1`. If your solution is 
+correct, you should be able to see the following output for each of 
+the 10 test datasets:
+```
+--------------
+Dataset  X
+The input length is XX
+Solution is correct
+```
