@@ -1,4 +1,10 @@
 
+## Important Note
+
+If you have already checked out the repo before 8/29 8PM, you need to rerun `git pull` to make sure everything is up to date.
+
+To submit your code, you need to run `rai -p ./MP1 --submit MP1`. This functionality hasn't been enabled yet, and we will make a campuswire post when it's available.
+
 ## Objective
 
 The purpose of this lab is for you to become familiar with using the CUDA API by implementing a simple vector addition kernel and its associated host code as shown in the lectures.
