@@ -3,7 +3,7 @@
 
 If you have already checked out the repo before 8/29 8PM, you need to rerun `git pull` to make sure everything is up to date.
 
-To submit your code, you need to run `rai -p ./MP1 --submit MP1`. This functionality hasn't been enabled yet, and we will make a campuswire post when it's available. To check your submission history, run `rai history -p ./MP1` or `rai l-history -p ./MP1`. 
+To submit your code, you need to run `rai -p ./MP1 --submit MP1`. This functionality hasn't been enabled yet, and we will make a campuswire post when it's available. To check your submission history, run `rai history -p ./MP1` (last 20 enties) or `rai l-history -p ./MP1` (last 100 enties). 
 
 ## Objective
 
