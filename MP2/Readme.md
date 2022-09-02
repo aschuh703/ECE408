@@ -50,3 +50,10 @@ The dimensions of B are X x X
 Solution is correct
 ```
 
+## WSL issue with run_datasets
+
+Windows may convert newline character of our run_datasets script, which will cause execution failure (executing command $'\r') on the RAI server. To fix this, run the following commands to convert the script back to Unix:
+```
+sudo apt-get install dos2unix
+dos2unix run_datasets
+```
