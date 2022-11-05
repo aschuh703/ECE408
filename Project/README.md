@@ -28,10 +28,10 @@ You will be working on this project individually. We will release the code for p
 
 * [Milestone 1: Rai Installation, CPU Convolution, Profiling](#milestone-1-rai-installation-cpu-convolution-profiling)
 * [Milestone 2: Baseline Convolutional Kernel](#milestone-2-baseline-convolutional-kernel)
-<!-- * [Milestone 3: Three Optimizations](#milestone-3-three-optimizations)
-* [Final Submission](#final-submission)
-* [Final Report](#final-report) -->
+* [Milestone 3: GPU Convolution Kernel Optimizations](#milestone-3-gpu-convolution-kernel-optimizations)
+* [Optimizations](#optimizations)
 * [Rubric](#rubric)
+* [Final Competition](#final-competition)
 * [Appendix](#appendix)
 
 ## Milestone 1: Rai Installation, CPU convolution, Profiling
@@ -303,6 +303,91 @@ Use
 
 to mark your submission for grading. Make sure to complete your report on Canvas (https://canvas.illinois.edu/courses/30068/quizzes/251854). Double check you include all items listed in the Deliverables for this milestone.
 
+## Milestone 3: GPU Convolution Kernel Optimizations
+
+***Deadline: December 2nd, 8 PM CST***
+
+| Deliverables |
+| ------------ |
+| Implement multiple GPU optimizations |
+| Write your report and upload PDF to Canvas: https://canvas.illinois.edu/courses/30068/quizzes/253930|
+| Use `rai -p <project folder> --submit=m3` to mark your job for grading |
+
+### Add GPU Optimizations
+
+You should attempt to implement at least 10 points of GPU optimizations (as seen in [optimizations](#optimizations)). You can implement these optimizations separately from each other or stack each optimization in order to maximize performance. If you implement your optimization separately, you must still include the code for each optimization in your submission even if it is unused in the final result. In this case it is recommended to create different methods and kernels to clarify what sections of the code apply to each optimization. 
+
+You must also make sure to clarify which baseline is used when analyzing the performance for a new optimization. If you are analyzing a result with a single optimization implemented, you should compare against your basic convolution kernel in Milestone 2. If you begin to stack multiple optimizations, for each optimization you add should be compared against the previous version without said optimization. This way you can most efficently analyse the effects of adding the given optimization. 
+It is fine if an optimization is not improving the performance against the baseline,
+but you have to provide your implementation in your code and sufficient profiling results in your report. Also please remember when profiling your optimizations to use the `--queue rai_amd64_exclusive` flag to run your code on the exclusive server so that it doesn't contest with other students submissions and you can have the most accurate timing results.
+
+Part of the grade for this milestone is whether or not you can achieve a reasonable overall performance, which we will measure as the sum of the first and second layer OP Times. If you have done milestone 2 correctly, for a batch size of 10000, the sum between the first and second layer OP Times (on the exclusive queue) should equal about **170ms**. If this is not the case, you may want to examine your milestone 2 code. In order to achieve full credit for the performace grade this milestone, we ask that you bring the sum of the first and second layer OP Times down to **70ms** or less for a batch size of 10000. Any submissions between **70ms** and **170ms** will be given a performance grade linearly extrapolated from the performance relative to these two values. Any submission slower than **170ms** will recieve no credit for the performance grade.
+
+### Extra credits in PM3
+
+If you have correctly implemented 10 points of optimizations, additional optimization points will count towards extra credits. Each additional optimization point worths 2.5%. You can earn 5% maximum towards your project grade. Make sure you implement 10 optimization points for this milestone first before considering extra credits. If you implement some optimizations incorrectly, we will consider extra points as part of your PM3 until you have 10 correct optimization points, since each point worths 4% in PM3. 
+
+### Interpreting the timing output from rai
+
+You will see two types of times reported per layer as follows
+
+
+    ✱ Running bash -c "./m3 1000"   \\ Output will appear after run is complete.
+    Test batch size: 1000
+    Loading fashion-mnist data...Done
+    Loading model...Done
+    Conv-GPU==
+    Layer Time: 61.1231 ms
+    Op Time: 4.82135 ms
+    Conv-GPU==
+    Layer Time: 55.4437 ms
+    Op Time: 16.6154 ms
+    
+    Test Accuracy: 0.886
+
+
+1. "Op Time" - This is time between the last cudaMemcpy call before your first kernel call and the first cudaMemcpy after your last kernel call (i.e. just `new-forward.cu -> conv_forward_gpu()`). It does not include the cudaMemcpy times.
+2. "Layer Time" - This is the total time taken to perform the convolution layer (C1 or C3). It includes the times for all kernel and CUDA API calls (i.e. the total time of all three `new-forward.cu -> conv_forward_gpu*` functions).
+
+### Performance Analysis with Nsight-Systems and Nsight-Compute
+
+Use the NVIDIA Nsight-Systems(`nsys`) and Nsight-Compute(`nv-nsight-cu-cli`) and your analysis information to describe the effect that your optimizations had on the performance of your convolution.
+If possible, you should try to separate the effect of each optimization in your analysis.
+
+For this milestone, edit the responses in the given `m3_report_template.docx` file, export the report as a PDF, and name the PDF as `report.pdf`. Describe in detail each optimization you implement, including how and why you choose to implement that specific optimization, why you thought the optimization may be fruitful, the actual results of the optimization and whether it was fruitful (use quantitative data from `nsys` and `nv-nsight-cu` to justify your explanation), and include any external references used during identification or development of the optimization.
+
+| Report |
+| ------------ |
+| Describe the optimizations as specified |
+| Use data from `nsys` and/or `nv-nsight-cu-cli` to analyze your optimizations and justify the effects of your optimizations |
+| Use `m3_report_template.docx` to complete your report |
+
+Use 
+    
+    rai -p <project folder> --submit=m3
+    
+to submit your project folder. Make sure to upload your `report.pdf` on Canvas: https://canvas.illinois.edu/courses/30068/quizzes/253930. Make sure you answer all items listed above for this milestone, and include your name, NetID, and class section. 
+
+## Optimizations
+
+These are the list of optimizations we will consider valid for Milestone 3. You should implement 10 points worth of optimizations in order to recieve full credit for Milestone 3. If you would like to impelement a potential optimization that is not on this list, please consult a TA or instructor beforehand to verify that the optimization is valid and to assign it a point value.
+
+* Tiled shared memory convolution (**2 points**)
+* Shared memory matrix multiplication and input matrix unrolling (**3 points**)
+* Kernel fusion for unrolling and matrix-multiplication (requires previous optimization) (**2 points**)
+* Weight matrix (kernel values) in constant memory (**1 point**)
+* Tuning with restrict and loop unrolling (considered as one optimization only if you do both) (**3 points**)
+* Sweeping various parameters to find best values (block sizes, amount of thread coarsening) (**1 point**)
+* Multiple kernel implementations for different layer sizes (**1 point**)
+* Input channel reduction: tree (**3 point**)
+* Input channel reduction: atomics (**2 point**)
+* Fixed point (FP16) arithmetic. (note this can modify model accuracy slightly) (**4 points**)
+* Using Streams to overlap computation with data transfer (**4 points**)
+* An advanced matrix multiplication algorithm (register-tiled, for example) (**5 points**)
+* Using Tensor Cores to speed up matrix multiplication (**5 points**)
+* Overlap-Add method for FFT-based convolution (note this is **very** hard, and may not yield a large performace increase due to mask size) (**8 points**)
+
+
 ## Rubric
 
 The overall project score will be computed as follows. We will release rubic details of later milestones based on the class schedule.
@@ -315,8 +400,33 @@ So please always do `git pull` to update the project instructions.
     * Correctness ( 20% )
     * Report( 10% )
 3. Milestone 3 ( 50% )
-4. Extra Credit ( up to +5% maximum )
+    * Overall Performance ( 10% )
+    * Correctness ( 2% for each optimization point, 20% maximum )
+    * Report ( 2% for each optimization point, 20% maximum )
+4. Extra Credit ( up to +5% maximum, +2.5% per additional optimization point. You can have maximum 2 additional optimization points )
+    * Correctness ( 1.5% for each additional optimization point )
+    * Report ( 1% for each additional optimization point )
 
+
+## Final Competition
+***Deadline: December 9th, 8 PM CST***
+
+For the week after PM3 is due,
+you can compete performance of your convolution kernel with other students.
+We will award extra credits to top performers in this competition.
+The metric used for this competition will be the sum of OP Times, and you can see the current standings using the `rai -p <project_directory> ranking` command. Note that the only submissions that will be counted towards the ranking are ones that run the network with a batch size of 10000 (no profiling). Using the `--submit=m3` flag will also count the submission towards the rankings.
+
+Since we want you to focus on kernel optimizations, 
+host side optimizations like steams overlap will have little effect.
+The leaderboard is quite dynamic since it's updated upon each valid submission.
+We will finalize standing of each participant by taking average of mulitple runs.
+Note that it is also possible that some participants develop in private
+and submit their ranking in the last minute.
+So don't be suprised if you fall out of certain bracket in the end.
+
+1. Top 20 on leaderboard ( 1% towards final grade )
+2. Top 50 on leaderboard ( 0.6% towards final grade )
+3. Top 80 on leaderboard ( 0.2% towards final grade )
 
 ## Appendix
 
