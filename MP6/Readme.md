@@ -11,7 +11,7 @@ Based on the histogram, you will compute a histogram equalization function which
 
 Before starting this lab, make sure that:
 
-* You have completed all week 7 lecture videos
+* You have reviewed lectures on parallel scan and histogramming
 
 ## Instruction
 
