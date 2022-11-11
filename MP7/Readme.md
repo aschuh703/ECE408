@@ -11,7 +11,7 @@ on the Jagged Diagonal Storage (JDS) transposed format. A diagram demonstrating 
 
 Before starting this lab, make sure that:
 
-* You have reviewed lectures on sparse methods.
+* You have reviewed lectures on sparse methods
 * You have completed MP-6
 
 ## Instructions
