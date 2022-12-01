@@ -409,7 +409,7 @@ So please always do `git pull` to update the project instructions.
 
 
 ## Final Competition
-***Deadline: December 9th, 8 PM CST***
+***Deadline: December 11th, 8 PM CST***
 
 For the week after PM3 is due,
 you can compete performance of your convolution kernel with other students.
