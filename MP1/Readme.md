@@ -1,7 +1,8 @@
+### Lab1(MP1)
 
 ## Important Note
 
-If you have already checked out the repo before 8/29 8PM, you need to rerun `git pull` to make sure everything is up to date.
+If you have already checked out the repo before 1/23 12AM, you need to rerun `git pull` to make sure everything is up to date.
 
 To submit your code, you need to run `rai -p ./MP1 --submit MP1`. To check your submission history, run `rai history -p ./MP1` (last 20 enties) or `rai l-history -p ./MP1` (last 100 enties). 
 
