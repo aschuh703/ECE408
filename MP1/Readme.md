@@ -1,6 +1,6 @@
 
 
-## Lab1(MP1)
+## Lab1(MP1) Instruction
 
 If you have already checked out the repo before 1/23 12AM, you need to rerun `git pull` to make sure everything is up to date.
 
