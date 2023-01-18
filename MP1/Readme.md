@@ -6,7 +6,8 @@ If you have already checked out the repo before 1/23 12AM, you need to rerun `gi
 
 To submit your code, you need to run `rai -p ./MP1 --submit MP1`. To check your submission history, run `rai history -p ./MP1` (last 20 enties) or `rai l-history -p ./MP1` (last 100 enties). 
 
-You will need the URL to your submission to complete the first question of your lab1 quiz. The lab and quiz due Feb 3 at 8pm. 
+You will need the URL to your submission to complete the first question of your lab1 quiz. The quiz is autograded, and the URL is saved for regrading purpose. Make sure to answer each question before turning in the quiz. The lab and quiz due Feb 3 at 8pm. 
+
 
 ### Objective
 
