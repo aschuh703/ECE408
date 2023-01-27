@@ -1,15 +1,15 @@
-
-## Important Note
+## Lab1(MP1) Instructions
+### Important Note
 
 If you have already checked out the repo before 9/2 8PM, you need to rerun `git pull` to make sure everything is up to date.
 
 To submit your code, you need to run `rai -p ./MP2 --submit MP2`. To check your submission history, run `rai history -p ./MP2` (last 20 enties) or `rai l-history -p ./MP2` (last 100 enties). 
 
-## Objective
+### Objective
 
 The purpose of this lab is for you to practice with using the CUDA API by implementing a simple Matrix Multiply kernel and its associated host code as shown in the lectures.
 
-## Prerequisites
+### Prerequisites
 
 Before starting this lab, make sure that:
 
@@ -17,7 +17,7 @@ Before starting this lab, make sure that:
 
 * You have completed Lab1 (MP1)
 
-## Instruction
+### Instruction
 
 You should edit the code in `template.cu` to perform the following:
 
