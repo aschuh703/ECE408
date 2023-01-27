@@ -1,4 +1,4 @@
-## Lab1(MP1) Instructions
+## Lab2(MP2) Instructions
 ### Important Note
 
 If you have already checked out the repo before 9/2 8PM, you need to rerun `git pull` to make sure everything is up to date.
