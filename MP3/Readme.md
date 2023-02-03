@@ -1,15 +1,15 @@
-
-## Important Note
+## Lab3(MP3) Instruction
+### Important Note
 
 If you have already checked out the repo before 9/9 8PM, you need to rerun `git pull` to make sure everything is up to date.
 
 To submit your code, you need to run `rai -p ./MP3 --submit MP3`. To check your submission history, run `rai history -p ./MP3` (last 20 enties) or `rai l-history -p ./MP3` (last 100 enties). 
 
-## Objective
+### Objective
 
 The purpose of this lab is for you to practice with using the CUDA API by implementing a tiled Matrix Multiply kernel and its associated host code as shown in the lectures.
 
-## Prerequisites
+### Prerequisites
 
 Before starting this lab, make sure that:
 
@@ -17,7 +17,7 @@ Before starting this lab, make sure that:
 
 * You have completed Lab2 (MP2)
 
-## Instruction
+### Instruction
 
 You should edit the code in `template.cu` to perform the following:
 
@@ -50,7 +50,7 @@ The dimensions of B are X x X
 Solution is correct
 ```
 
-## WSL issue with run_datasets
+### WSL issue with run_datasets
 
 Windows may convert newline character of our run_datasets script, which will cause execution failure (executing command $'\r') on the RAI server. To fix this, run the following commands to convert the script back to Unix:
 ```
