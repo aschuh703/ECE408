@@ -1,9 +1,11 @@
 ## Lab3(MP3) Instruction
 ### Important Note
 
-If you have already checked out the repo before 9/9 8PM, you need to rerun `git pull` to make sure everything is up to date.
+Run `git pull` to make sure everything is up to date.
 
 To submit your code, you need to run `rai -p ./MP3 --submit MP3`. To check your submission history, run `rai history -p ./MP3` (last 20 enties) or `rai l-history -p ./MP3` (last 100 enties). 
+
+You will need the URL to your submission to complete the first question of your lab3 quiz. The quiz is autograded, and the URL is saved for regrading purpose. Make sure to answer each question before turning in the quiz. The lab and quiz due Feb 17 at 8pm.
 
 ### Objective
 
