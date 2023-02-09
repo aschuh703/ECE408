@@ -5,6 +5,8 @@ If you have already checked out the repo before 2/13 8PM, you need to rerun git 
 
 To submit your code, you need to run `rai -p ./MP4 --submit MP4`. To check your submission history, run `rai history -p ./MP4` (last 20 enties) or `rai l-history -p ./MP4` (last 100 enties). 
 
+You will need the URL to your submission to complete the first question of your lab4 quiz. The quiz is autograded, and the URL is saved for regrading purpose. Make sure to answer each question before turning in the quiz. The lab and quiz due Feb 24 at 8pm.
+
 ### Objective
 
 The purpose of this lab is for you to practice with using the CUDA API by implementing a 3D Convolution kernel and its associated host code as shown in the lectures.
