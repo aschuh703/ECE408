@@ -1,7 +1,7 @@
-##Lab4(MP4) Instructions
+## Lab4(MP4) Instructions
 
 ### Important Note
-If you have already checked out the repo before 9/16 8PM, you need to rerun git pull to make sure everything is up to date.
+If you have already checked out the repo before 2/13 8PM, you need to rerun git pull to make sure everything is up to date.
 
 To submit your code, you need to run `rai -p ./MP4 --submit MP4`. To check your submission history, run `rai history -p ./MP4` (last 20 enties) or `rai l-history -p ./MP4` (last 100 enties). 
 
