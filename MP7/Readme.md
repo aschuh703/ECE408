@@ -13,7 +13,7 @@ You will need the URL to your submission to complete the first question of your 
 Before starting this lab, make sure that:
 
 * You have reviewed lectures on sparse methods
-* You have completed MP-6
+* You have completed MP6
 
 ### Instructions
 
