@@ -414,12 +414,12 @@ So please always do `git pull` to update the project instructions.
 For the week after PM3 is due,
 you can compete performance of your convolution kernel with other students.
 We will award extra credits to top performers in this competition.
-The metric used for this competition will be the sum of OP Times, and you can see the current standings using the `rai -p <project_directory> ranking` command. Note that the only submissions that will be counted towards the ranking are ones that run the network with a batch size of 10000 (no profiling). The competition ranking is active aftert milestone 3. Any submission will counted into the Competition after the ranking is active. There is no need to include '--submit' in the command for Competition.
+The metric used for this competition will be the sum of OP Times, and you can see the current standings using the `rai -p <project_directory> ranking` command. Note that the only submissions that will be counted towards the ranking are ones that run the network with a batch size of 10000 (no profiling). The competition ranking is active after milestone 3. Any submission will counted into the Competition after the ranking is active. There is no need to include '--submit' in the command for Competition.
 
 Since we want you to focus on kernel optimizations, 
 host side optimizations like steams overlap will not be allowed in the competition. 
 Any submission with streaming will not be counted in the leaderboard.
-If you want to include it for some reason, please contact TAs or the professor.
+If you believe your run is incorrectly blocked from the leaderboard, contact the TAs or the professor.
 The leaderboard is quite dynamic since it's updated upon each valid submission.
 We will finalize standing of each participant by taking average of mulitple runs.
 Note that it is also possible that some participants develop in private
