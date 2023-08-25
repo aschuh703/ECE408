@@ -1,6 +1,6 @@
 # ECE408 Spring 2023
 
-Welcome to ECE408 / CS483 / CSE408 Spring 2023!
+Welcome to ECE408 / CS483 / CSE408 Fall 2023!
 
 Checkout the [Introduction to RAID](https://drive.google.com/file/d/1t6-uPgbCxi5zx0FKKG15nanXt7NX8zCP/view?usp=sharing) PDF. This document explains the RAI/RAID organization and options. Note, some of the more advanced options like using an exclusive queue will not be available until it is time to work on the project.
 
