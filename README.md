@@ -1,4 +1,4 @@
-# ECE408 Spring 2023
+# ECE408 Fall 2023
 
 Welcome to ECE408 / CS483 / CSE408 Fall 2023!
 
