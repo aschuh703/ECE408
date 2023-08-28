@@ -37,5 +37,5 @@ After the server finishes executing your job, it will pack your build folder and
  ✱ The build folder has been uploaded to http://your_url.tar.gz. The data will be present for only a short duration of time.
 ```
 
-You will need this URL to complete the first question of your lab0 quiz. The quiz is autograded, and the URL is saved for regrading purpose. Make sure to answer each question before turning in the quiz. The quiz dues Jan 27 at 8pm. 
+You will need this URL to complete the first question of your lab0 quiz. The quiz is autograded, and the URL is saved for regrading purpose. Make sure to answer each question before turning in the quiz.  
 
