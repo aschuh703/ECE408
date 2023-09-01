@@ -20,7 +20,7 @@ Before starting this lab, make sure that:
 
 ## Instruction
 
-Edit the code in 'template.cu' to perform the following:
+Edit the code in `template.cu` to perform the following:
 
 * Allocate device memory
 
