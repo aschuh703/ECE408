@@ -16,11 +16,19 @@ Before starting this lab, make sure that:
 * You have completed all week 4 lectures or videos
 
 ## Instructions
-* Edit the code to implement a 3D convolution with a 3x3x3 kernel in constant memory and a 3D shared-memory tiling.
+* Allocate device memory
 
-* Edit the code to launch the kernel you implemented. The function should launch 3D CUDA grid and blocks. You may use any of the 3 tiling strategies taught in class.
+* Copy host memory to device
 
-* Answer the questions found in the questions tab.
+* Initialize thread block and kernel grid dimensions
+
+* Invoke CUDA kernel
+
+* Copy results from device to host
+
+* Free device memory
+
+* Write the CUDA kernel
 
 Instructions about where to place each part of the code is
 demarcated by the `//@@` comment lines.
