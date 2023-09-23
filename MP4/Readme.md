@@ -16,6 +16,8 @@ Before starting this lab, make sure that:
 * You have completed all week 4 lectures or videos
 
 ## Instructions
+You should edit the code in `template.cu` to perform the following:
+
 * Allocate device memory
 
 * Copy host memory to device
