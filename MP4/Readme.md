@@ -8,7 +8,7 @@ To submit your code, you need to run `rai -p ./MP4 --submit MP4`. To check your 
 ## Objective
 The purpose of this lab is to implement a 3D convolution using constant memory for the kernel and 3D shared memory tiling. 
 
-##Prerequisite
+## Prerequisite
 Before starting this lab, make sure that:
 
 * You have completed the "Tiled Matrix Multiplication" MP (MP3)
