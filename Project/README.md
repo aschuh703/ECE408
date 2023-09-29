@@ -40,7 +40,7 @@ For each milestone, you will also need to complete a report on Canvas. The table
 | ------------ |
 | Create a CPU convolution implementation |
 | Profile your implementation with `gprof` |
-| Complete your report on Canvas: https://canvas.illinois.edu/courses/38813/quizzes/291358|
+| Complete your report on Canvas: https://canvas.illinois.edu/courses/34994/assignments/674251 |
 | Use `rai -p <project folder> --submit=m1` to mark your job for grading |
 
 ### Testing Rai
