@@ -27,6 +27,7 @@ You will be working on this project individually. We will release the code for p
 ## Table of Contents
 
 * [Milestone 1: Rai Installation, CPU Convolution, Profiling](#milestone-1-rai-installation-cpu-convolution-profiling)
+* [Milestone 2: Baseline Convolutional Kernel](#milestone-2-baseline-convolutional-kernel)
 * [Rubric](#rubric)
 * [Appendix](#appendix)
 
