@@ -41,7 +41,7 @@ For each milestone, you will also need to complete a report on Canvas. The table
 | ------------ |
 | Create a CPU convolution implementation |
 | Profile your implementation with `gprof` |
-| Complete your report on Canvas: https://canvas.illinois.edu/courses/38813/quizzes/291358|
+| Complete your report on Canvas: https://canvas.illinois.edu/courses/38813/assignments/816018|
 | Use `rai -p <project folder> --submit=m1` to mark your job for grading |
 
 ### Testing Rai
@@ -193,7 +193,7 @@ Use
 
     rai -p <project folder> --submit=m1
 
-to mark your submission for grading. Make sure to complete your report on Canvas (https://canvas.illinois.edu/courses/30068/quizzes/250868).  Make sure you include all items listed above for this milestone.
+to mark your submission for grading. Make sure to complete your report on Canvas (https://canvas.illinois.edu/courses/38813/assignments/816018).  Make sure you include all items listed above for this milestone.
 
 
 ## Milestone 2: Baseline Convolutional Kernel
