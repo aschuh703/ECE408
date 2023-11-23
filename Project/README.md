@@ -421,7 +421,7 @@ These are the list of optimizations we will consider valid for Milestone 3. You 
 * Multiple kernel implementations for different layer sizes (**1 point**)
 * Input channel reduction: tree (**3 point**)
 * Input channel reduction: atomics (**2 point**)
-* Fixed point (FP16) arithmetic. (note this can modify model accuracy slightly) (**4 points**)
+* FP16 arithmetic. (note this can modify model accuracy slightly) (**4 points**)
 * Using Streams to overlap computation with data transfer (**4 points**)
 * An advanced matrix multiplication algorithm (register-tiled, for example) (**5 points**)
 * Using Tensor Cores to speed up matrix multiplication (**5 points**)
