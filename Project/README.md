@@ -406,8 +406,10 @@ Use
     
     rai -p <project folder> --submit=m3
     
-to submit your project folder. Make sure to upload your `report.pdf` on Canvas: https://canvas.illinois.edu/courses/38813/quizzes/291356. Make sure you answer all items listed above for this milestone, and include your name, NetID, and class section. 
+to submit your project folder. Make sure to upload your `report.pdf` on Canvas: https://canvas.illinois.edu/courses/38813/quizzes/291356. Make sure you answer all items listed above for this milestone, and include your name, NetID, and class section.
 
+
+**All of the optimizations that you have done should be stored inside the Project folder. You can either put it inside comments in "new-forward.cu", or create separate files for each optimization, such as "opt1.cu", "opt2.cu". As long as we can find it inside the Project Folder. The best overall optimization that you want to submit of course still goes into "new-forward.cu".**
 ## Optimizations
 
 These are the list of optimizations we will consider valid for Milestone 3. You should implement 10 points worth of optimizations in order to recieve full credit for Milestone 3. If you would like to impelement a potential optimization that is not on this list, please consult a TA or instructor beforehand to verify that the optimization is valid and to assign it a point value.
@@ -426,6 +428,7 @@ These are the list of optimizations we will consider valid for Milestone 3. You 
 * An advanced matrix multiplication algorithm (register-tiled, for example) (**5 points**)
 * Using Tensor Cores to speed up matrix multiplication (**5 points**)
 * Overlap-Add method for FFT-based convolution (note this is **very** hard, and may not yield a large performace increase due to mask size) (**8 points**)
+
 
 ## Rubric
 
